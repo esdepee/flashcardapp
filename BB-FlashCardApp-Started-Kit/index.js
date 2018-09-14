@@ -43,3 +43,12 @@ let answers = function randomQuestion(questionArray){
 console.log(questions(placesQuestion))
 console.log(questions(placesAnswer))
 // console.log(placesQuestion[1])
+
+const showText = (id) => {
+    let card = document.getElementsByClassName(front);
+    card.classList.add('active');   
+}
+const hideText = (id) => {
+    let card = document.getElementsByClassName(back);
+    card.classList.remove('active');   
+}
