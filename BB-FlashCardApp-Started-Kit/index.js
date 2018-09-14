@@ -1,6 +1,6 @@
 
 // info in the flashcard
-
+//comment
 
 const placesQuestion = ['What is the capital of Kenya?', 
                      'In which country can we find a city called Oaxaca?', 
