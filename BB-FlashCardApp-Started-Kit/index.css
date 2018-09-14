@@ -1,0 +1,126 @@
+ul.top-bar {
+    top: 0;
+    left: 20px;
+    right: 20px;
+    /* width: 100%; */
+    height: 100px;
+
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #CFA9A9;
+    /* position: fixed; */
+
+    z-index: 99;
+
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+ul.top-bar li:first-child {
+    padding: 0;
+    width: 25%;
+}
+
+ul.top-bar li:first-child a {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+ul.top-bar li {
+    float: left;
+    line-height: 70px;
+    padding: 0 40px 0 40px;
+}
+
+ul.top-bar li a {
+    font-size: 30px;
+    display: block;
+    color: #111;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+ul.top-bar li a:hover {
+    background-color: #CCC;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #FAF8F8;
+  border: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  padding: 50px;
+  display: table;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+article.flashcard {
+  margin: 0px auto;
+  border: 1px rgba(255, 255, 255, 0.03) solid;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 400px;
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=checkbox]:checked ~ label{
+    section.front {
+      height: 0%;
+    }
+
+    section.back {
+      height: 100%;
+    }
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  section {
+    display: block;
+    font: 30px 'Oswald', sans-serif;
+    text-align: center;
+    line-height: 400px;
+    width: 100%;
+    transition: all 0.2s linear 0s;
+    overflow: hidden;
+
+    &.front {
+      color: #BA1F53;
+      background: #DDD;
+      height: 100%;
+    }
+
+    &.back {
+      color: #DDD;
+      background: #C85073;
+      height: 0%;
+    }
+  }
+}
